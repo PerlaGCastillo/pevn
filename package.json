@@ -1,0 +1,24 @@
+{
+  "name": "pevn",
+  "version": "1.0.0",
+  "description": "intro to user roles with PostgreSQL, Express, VueJS, NodeJs  by https://shorturl.at/entPS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "babel": "nodemon app.js --exec babel-node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-load": "^1.1.16"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.24.0",
+    "nodemon": "^3.1.0"
+  }
+}

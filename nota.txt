@@ -1,0 +1,13 @@
+-npm run dev
+-npm run babel
+
+
+npm init --y
+npm i express --save
+crear app.js
+-run -> node app.js
+npm i nodemon -D
+
+
+npm i @babel/core @babel/cli @babel/preset-env @babel/node -D
+crear .babelrc
