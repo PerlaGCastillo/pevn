@@ -1,2 +1,4 @@
-node_modules
-keys.js
+node_modules/
+database/keys.js
+#storage/*.key
+#.env
