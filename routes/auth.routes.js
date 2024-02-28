@@ -1,10 +1,8 @@
 import express from "express"
+import authentication from '../controllers/auth'
 
 const router = express.Router()
 
-router.post("/signup", (req, res) => {
-  console.log(req.body)
-  res.send("Registered")
-})
+router.post("/signup", authentication.signUp)
 
 module.exports=router

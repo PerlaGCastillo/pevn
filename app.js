@@ -18,13 +18,11 @@ app.use(express.static(path.join(__dirname, 'public')))
 // console.log(__dirname)
 
 // routes
-app.get('/', (req, res) =>{
-    res.send('hola mundo')
+app.use('/', require('./routes/auth.routes'))
 
-})
 
 // settings 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3000)
 
 app.listen(app.get('port'), () =>{
     console.log(`servidor en puerto ${app.get('port')}`, )
