@@ -2,5 +2,4 @@ node_modules/
 database/keys.js
 controllers/lib/cloudinary.js
 controllers/lib/.env
-#storage/*.key
-#.env
+

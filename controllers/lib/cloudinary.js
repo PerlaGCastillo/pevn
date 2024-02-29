@@ -2,7 +2,6 @@ import {v2 as cloudinary} from "cloudinary"
 
 const cloudinary = require('cloudinary'.v2)
 
-
  cloudinary.config({
    cloud_name: dcbcf1jtk,
    api_key: 449196468941497,
