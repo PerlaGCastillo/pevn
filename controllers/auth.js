@@ -106,4 +106,4 @@ authentication.signIn = async (req, res) =>{
   }
 }
 
-module.exports = authentication;
+module.exports = authentication
