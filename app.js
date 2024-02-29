@@ -19,6 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // routes
 app.use('/', require('./routes/auth.routes'))
+app.use('/professor', require('./routes/professor.routes'))
 
 
 // settings 

@@ -102,12 +102,8 @@ authentication.signIn = async (req, res) =>{
         message:'Error',
         error
       })
-      
     }
-
   }
-  
-
 }
 
 module.exports = authentication;
