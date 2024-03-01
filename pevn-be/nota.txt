@@ -1,0 +1,88 @@
+-npm run dev
+-npm run babel
+
+
+npm init --y
+npm i express --save
+crear app.js
+-run -> node app.js
+npm i nodemon -D
+
+
+npm i @babel/core @babel/cli @babel/preset-env @babel/node -D
+crear .babelrc
+
+versiones de servidor js
+
+npm i morgan --save
+muestra por consola peticiones al servidor 
+
+
+npm i cors --save
+permitir accesder al servidor desde otros dominios
+
+npm i express-fileupload --save
+leer archivos
+
+npm i connect-history-api-fallback
+vue usa modo history por ser spa- problemas con express para eso instalamos connect-h- 
+
+npm i pg --save
+crear db
+
+brew services start postgresql
+psql postgres 
+\c pevn
+\dt 
+
+ keys.js
+ localconfig 
+
+ Routes 
+    auth.routes.js
+Postman 
+-post localhost:3000/signup 
+body x-www
+
+
+\dt
+SELECT*FROM professor;
+pevn=# 
+ALTER TABLE professor ADD CONSTRAINT professor_p_email_key UNIQUE (p_email);
+ALTER TABLE student ADD CONSTRAINT student_s_email_key UNIQUE (s_email);
+
+prueba sin passport local de inicio de sesión 
+
+
+proffesor.routes
+professor.js
+
+ALTER TABLE course RENAME COLUMN c_decription TO c_description
+
+C - post
+R - get 
+U - put
+D - 
+
+
+express file-upload
+  req.files
+leer archivos durante request
+
+
+npm i cloudinary --save
+
+student
+-db view n join 
+
+ sudo npm install -g @vue/cli@latest
+vue --version
+
+
+npm run serve
+ctrlc
+
+m'odulo compatibilidad vue server
+
+npm i axios vue-axios --save
+
