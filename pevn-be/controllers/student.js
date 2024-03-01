@@ -1,6 +1,7 @@
 import pool from "../database/keys"
 import cloudinary from '../lib/cloudinary'
 
+
 const student = {}
 student.getCourses = async (req, res) => {
   const id = req.params.id

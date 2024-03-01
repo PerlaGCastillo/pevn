@@ -1,6 +1,7 @@
 {
   "name": "pevn",
   "version": "1.0.0",
+  "type": "module",
   "description": "intro to user roles with PostgreSQL, Express, VueJS, NodeJs  by https://shorturl.at/entPS",
   "main": "index.js",
   "scripts": {
