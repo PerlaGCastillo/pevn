@@ -13,12 +13,12 @@ authentication.signUp = async (req, res) => {
       res.status(200).json({
         message: "Profesor registrado con éxito",
         professor: { nombre, email, password },
-      })
+      }) 
     } catch (error) {
       if (error.constraint == "professor_p_email_key") {
         res.status(500).json({
           message:
-            "Correo electrónico ya registrado, por favor, ingresa un correo válido",
+            "Correo electrónico ya registrado",
           error
         })
       } else {
@@ -42,7 +42,7 @@ authentication.signUp = async (req, res) => {
       if (error.constraint == "student_s_email_key") {
         res.status(500).json({
           message:
-            "Correo electrónico ya registrado, por favor, ingresa un correo válido",
+            "Correo electrónico ya registrado",
           error
         })
       } else {
@@ -63,7 +63,7 @@ authentication.signIn = async (req, res) =>{
       if (professor.length>0) {
         res.status(200).json({
           id: professor[0].id_p,
-          name: professor[0].p_name,
+          name: professor[0].p_nombre,
           email: professor[0].p_email,
           role: 'professor'
         })
@@ -87,7 +87,7 @@ authentication.signIn = async (req, res) =>{
       if (student.length>0) {
         res.status(200).json({
           id: student[0].id_s,
-          name: student[0].s_name,
+          name: student[0].s_nombre,
           email: student[0].s_email,
           role: 'student'
         })

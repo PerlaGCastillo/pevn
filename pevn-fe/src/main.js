@@ -1,17 +1,19 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import vuetify from './plugins/vuetify'
-import { loadFonts } from './plugins/webfontloader'
+import Vue from "vue"
+import App from "./App.vue"
+import router from "./router"
+import axios from "axios"
+import VueAxios from "vue-axios"
+import vuetify from "./plugins/vuetify"
+import "@babel/polyfill"
 
-// import axios from'axios'
-// import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
 
-loadFonts()
+axios.defaults.baseURL = "http://localhost:3000/"
 
-// VueAxios.use(VueAxios, axios)
+Vue.config.productionTip = false;
 
-// axios.defaults.baseURL = 'http://localhost:3000'
-
-createApp(App)
-  .use(vuetify)
-  .mount('#app')
+new Vue({
+  router,
+  vuetify,
+  render: (h) => h(App),
+}).$mount("#app")

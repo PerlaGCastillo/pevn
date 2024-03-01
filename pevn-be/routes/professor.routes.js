@@ -12,11 +12,11 @@ router.post('my-courses', professor.getCourses)
 
 //assignments
 
-//router.post('/assignment/:id_c', professor.createAssignment)
-//router.get('/course-assignments/:id_c', professor.getAssignments)
+router.post('/assignment/:id_c', professor.createAssignment)
+router.get('/course-assignments/:id_c', professor.getAssignments)
 
 //deliveries
 
-//router.get('/deliveries/:id_a', professor.getDeliveries)
+router.get('/deliveries/:id_a', professor.getDeliveries)
 
 module.exports = router
