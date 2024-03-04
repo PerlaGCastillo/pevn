@@ -4,9 +4,10 @@ intro to PostgreSQL, Express, VueJS, NodeJs  by https://shorturl.at/entPS
 ## Clone
 ```
 git clone https://github.com/PerlaGCastillo/pevn
+create your local postgresql db 
 ```
 
-# pevn-fe
+# pevn-be
 
 ## Backend folder
 ```
