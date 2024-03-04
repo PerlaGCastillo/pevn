@@ -1,12 +1,12 @@
 # PEVN project 
 intro to PostgreSQL, Express, VueJS, NodeJs  by https://shorturl.at/entPS
 
-# pevn-be
-
-## Project
+## Clone
 ```
 git clone https://github.com/PerlaGCastillo/pevn
 ```
+
+# pevn-fe
 
 ## Backend folder
 ```
