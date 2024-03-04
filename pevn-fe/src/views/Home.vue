@@ -1,3 +1,4 @@
+
 <template>
   <v-container>
     <v-app-bar app color="primary" dark>
@@ -81,8 +82,7 @@ export default {
     alert: { show: false, message: "" },
     nameRules: [
       value => !!value || "Campo obligatorio",
-      value =>
-        (value && value.length >= 5) || "Ingresa más de 5 caracteres"
+      value => (value && value.length >= 5) || "Ingresa más de 5 caracteres"
     ],
     emailRules: [
       value => !!value || "Ingresa tu correo",
@@ -90,9 +90,7 @@ export default {
     ],
     passwordRules: [
       value => !!value || "Ingresa tu contraseña",
-      value =>
-        (value && value.length >= 2) ||
-        "La contraseña debe tener más de 2 caracteres"
+      value => (value && value.length >= 2) ||  "La contraseña debe tener más de 2 caracteres"
     ],
     user: { name: "", email: "", password: "", role: "" },
     suForm: true
@@ -139,7 +137,7 @@ export default {
             show: true,
             type: "error",
             message: error.response.data.message
-          };
+          }
         }
       }
     }
