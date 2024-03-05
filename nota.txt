@@ -78,9 +78,6 @@ student
  sudo npm install -g @vue/cli@latest
 vue --version
 
-volver a este punto del tutorial y corregir ES module, agregar instrucciones faltantes
-https://www.youtube.com/watch?v=SWQUKTygZg8&list=PL3f738vgxpbj9fKW-rtmV0xcjo84WqZXy&index=9
-
 npm run serve
 ctrlc
 
@@ -91,3 +88,4 @@ vue add vuetify --y
 front botones y formulario
 autenticar datos
 text and typo vuetify - cards & courses
+  

@@ -63,7 +63,7 @@ authentication.signIn = async (req, res) =>{
       if (professor.length>0) {
         res.status(200).json({
           id: professor[0].id_p,
-          name: professor[0].p_nombre,
+          nombre: professor[0].p_nombre,
           email: professor[0].p_email,
           role: 'professor'
         })
@@ -78,16 +78,14 @@ authentication.signIn = async (req, res) =>{
         message:'Error',
         error
       })
-      
     }
-
   }else{
     try {
       const student = await (await pool.query('SELECT * FROM student WHERE s_email=$1 AND s_password=$2', [email,password])).rows
       if (student.length>0) {
         res.status(200).json({
           id: student[0].id_s,
-          name: student[0].s_nombre,
+          nombre: student[0].s_nombre,
           email: student[0].s_email,
           role: 'student'
         })

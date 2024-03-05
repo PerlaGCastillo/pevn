@@ -1,5 +1,5 @@
-import express from "express"
-import { urlencoded } from "express"
+import express, {urlencoded} from "express"
+// import { urlencoded } from "express"
 import morgan from "morgan"
 import cors from "cors"
 import fileUpload from "express-fileupload"
@@ -16,15 +16,13 @@ app.use(express.urlencoded({ extended: true }))
 app.use(fileUpload({ useTempFiles: true }))
 
 // routes
-app.use("/", require('./routes/auth.routes'))
-app.use("/", require('./routes/auth.routes'))
-app.use("/professor", require("./routes/professor.routes"))
-app.use("/student", require("./routes/student.routes"))
+app.use('/', require('./routes/auth.routes'))
+app.use('/professor', require('./routes/professor.routes'))
+app.use('/student', require('./routes/student.routes'))
 
 //Vue middlewares
 app.use(historyApiFallback())
 app.use(express.static(path.join(__dirname, "public")))
-//console.log(__dirname)
 
 // settings
 app.set("port", process.env.PORT || 3000)

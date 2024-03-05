@@ -18,7 +18,7 @@
           <v-card-title>Registro</v-card-title>
           <v-card-text>
             <v-form class="ma-3" @submit.prevent="signup()" ref="signupForm">
-              <v-text-field label="Nombre" prepend-icon="mdi-account"  :rules="nameRules" v-model="user.name" ></v-text-field>
+              <v-text-field label="Nombre" prepend-icon="mdi-account"  :rules="nameRules" v-model="user.nombre" ></v-text-field>
               <v-text-field label="Correo electrónico"  prepend-icon="mdi-email" :rules="emailRules" v-model="user.email" ></v-text-field>
               <v-text-field label="Contraseña" prepend-icon="mdi-lock" type="password" :rules="passwordRules"  v-model="user.password" ></v-text-field>
               <v-radio-group row v-model="user.role" :rules="[(v) => !!v || 'Selecciona una opción']">
@@ -64,7 +64,7 @@ export default {
       value => !!value || "Ingresa tu contraseña",
       value => (value && value.length >= 8) ||  "La contraseña debe tener más de 8 caracteres"
     ],
-    user: { name: "", email: "", password: "", role: "" },
+    user: { nombre: "", email: "", password: "", role: "" },
     suForm: true
   }),
   methods: {
