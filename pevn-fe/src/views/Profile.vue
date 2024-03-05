@@ -17,22 +17,22 @@
 </template>
 
 <script>
-import NavbarP from "@/components/NavbarP";
-import NavbarS from "@/components/NavbarS";
+import NavbarP from "@/components/NavbarP"
+import NavbarS from "@/components/NavbarS"
 
 export default {
   data: () => ({
     user: { role: "", name: "", email: "" }
   }),
   created: function() {
-    this.user = JSON.parse(sessionStorage.getItem("session"));
+    this.user = JSON.parse(sessionStorage.getItem("session"))
     if (this.user == null) {
-      this.$router.push("/");
+      this.$router.push("/")
     }
   },
     components: {
     NavbarP,
     NavbarS
   }
-};
+}
 </script>

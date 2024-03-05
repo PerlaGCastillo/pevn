@@ -51,7 +51,7 @@
 <script>
 export default {
   data: () => ({
-    alert: { show: false, message: "" },
+    alert: { show: false, message: '' },
     nameRules: [
       value => !!value || "Campo obligatorio",
       value => (value && value.length >= 2) || "Ingresa más de 2 caracteres"
@@ -69,39 +69,42 @@ export default {
   }),
   methods: {
     async signup() {
-      let valid = this.$refs.signupForm.validate();
+      let valid = this.$refs.signupForm.validate()
       if (valid) {
         try {
-          const res = await this.axios.post("/signup", this.user);
-          this.$refs.signupForm.reset();
-          this.suForm = false;
+          const res = await this.axios.post("/signup", this.user)
+          this.$refs.signupForm.reset()
+          this.suForm = false
           this.alert = {
             show: true,
             type: "success",
             message: res.data.message
-          };
+          }
         } catch (error) {
           this.alert = {
             show: true,
             type: "error",
             message: error.response.data.message
-          };
+          }
         }
       }
     },
     async signin() {
-      let valid = this.$refs.signinForm.validate();
+      let valid = this.$refs.signinForm.validate()
       if (valid) {
         try {
-          const res = await this.axios.post("/signin", this.user);
+          const res = await this.axios.post("/signin", this.user)
+          this.$refs.signinForm.reset()
+          console.log(res)
+
           if (res.data.NotFound) {
             this.alert = {
               show: true,
               type: "error",
               message: res.data.message
-            };
+            }
           } else {
-            sessionStorage.setItem("session", JSON.stringify(res.data));
+            sessionStorage.setItem("session", JSON.stringify(res.data))
             this.$router.push('/profile')
           }
         } catch (error) {
