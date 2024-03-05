@@ -1,4 +1,3 @@
-
 <template>
   <v-container>
     <v-app-bar app color="primary" dark>
@@ -19,25 +18,9 @@
           <v-card-title>Registro</v-card-title>
           <v-card-text>
             <v-form class="ma-3" @submit.prevent="signup()" ref="signupForm">
-              <v-text-field
-                label="Nombre"
-                prepend-icon="mdi-account"
-                :rules="nameRules"
-                v-model="user.name"
-              ></v-text-field>
-              <v-text-field
-                label="Correo electrónico"
-                prepend-icon="mdi-email"
-                :rules="emailRules"
-                v-model="user.email"
-              ></v-text-field>
-              <v-text-field
-                label="Contraseña"
-                prepend-icon="mdi-lock"
-                type="password"
-                :rules="passwordRules"
-                v-model="user.password"
-              ></v-text-field>
+              <v-text-field label="Nombre" prepend-icon="mdi-account"  :rules="nameRules" v-model="user.name" ></v-text-field>
+              <v-text-field label="Correo electrónico"  prepend-icon="mdi-email" :rules="emailRules" v-model="user.email" ></v-text-field>
+              <v-text-field label="Contraseña" prepend-icon="mdi-lock" type="password" :rules="passwordRules"  v-model="user.password" ></v-text-field>
               <v-radio-group row v-model="user.role" :rules="[(v) => !!v || 'Selecciona una opción']">
                 <v-radio label="Profesor" value="professor"></v-radio>
                 <v-radio label="Estudiante" value="student"></v-radio>
@@ -50,19 +33,8 @@
           <v-card-title>Iniciar Sesión</v-card-title>
           <v-card-text>
             <v-form class="ma-3" @submit.prevent="signin()" ref="signinForm">
-              <v-text-field
-                label="Correo electrónico"
-                prepend-icon="mdi-email"
-                :rules="emailRules"
-                v-model="user.email"
-              ></v-text-field>
-              <v-text-field
-                label="Contraseña"
-                prepend-icon="mdi-lock"
-                type="password"
-                :rules="passwordRules"
-                v-model="user.password"
-              ></v-text-field>
+              <v-text-field label="Correo electrónico" prepend-icon="mdi-email" :rules="emailRules" v-model="user.email"  ></v-text-field>
+              <v-text-field label="Contraseña" prepend-icon="mdi-lock" type="password" :rules="passwordRules"  v-model="user.password" ></v-text-field>
               <v-radio-group row v-model="user.role" :rules="[(v) => !!v || 'Selecciona una opción']">
                 <v-radio label="Profesor" value="professor"></v-radio>
                 <v-radio label="Estudiante" value="student"></v-radio>
@@ -82,7 +54,7 @@ export default {
     alert: { show: false, message: "" },
     nameRules: [
       value => !!value || "Campo obligatorio",
-      value => (value && value.length >= 5) || "Ingresa más de 5 caracteres"
+      value => (value && value.length >= 2) || "Ingresa más de 2 caracteres"
     ],
     emailRules: [
       value => !!value || "Ingresa tu correo",
@@ -90,7 +62,7 @@ export default {
     ],
     passwordRules: [
       value => !!value || "Ingresa tu contraseña",
-      value => (value && value.length >= 2) ||  "La contraseña debe tener más de 2 caracteres"
+      value => (value && value.length >= 8) ||  "La contraseña debe tener más de 8 caracteres"
     ],
     user: { name: "", email: "", password: "", role: "" },
     suForm: true
